@@ -12,8 +12,8 @@ import javax.imageio.ImageIO;
 public class MandelbrotRenderer implements Runnable {
 
     // The size of all images
-    private int width = 1920;
-    private int height = 1080;
+    private int width = 1366;
+    private int height = 768;
 
     // The number of maximum iterations
     private int maxIterations;
@@ -61,8 +61,7 @@ public class MandelbrotRenderer implements Runnable {
         for (MbrotParameter currMbrot : mbrots){
             // Do the work to create each image
             // Create a new image
-            BufferedImage img = new BufferedImage(width, height,
-                    BufferedImage.TYPE_INT_RGB);
+            BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
             File out = new File(currMbrot.fName);
 
             // For each pixel
