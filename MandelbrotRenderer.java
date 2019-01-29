@@ -95,7 +95,7 @@ public class MandelbrotRenderer implements Runnable {
                      * If the point looks as if it will diverge, color it black.
                      * Otherwise, give it a color from our color palette.
                      */
-                    if (a*a + b*b <= divergence)
+                    if (iteration == maxIterations)
                         point = black;
                     else {
                         point = colorPalette[iteration];
